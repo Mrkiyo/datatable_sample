@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Datatableのデモ">
+<title>Datatable - jQueryプラグイン</title>
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="./datatable/css/datatable.css"></link>
+  
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="./datatable/js/datatable.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+</head>
+<body>
+<h1>Datatable のデモ</h1>
+<table id="demo" class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>国籍</th>
+    <th>性別</th>
+    <th>名前</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>John</td>
+  </tr>
+  <tr>
+    <td>イギリス</td>
+    <td>女</td>
+    <td>Ann</td>
+  </tr>
+  <tr>
+    <td>日本</td>
+    <td>女</td>
+    <td>Saki</td>
+  </tr>
+  <tr>
+    <td>日本</td>
+    <td>男</td>
+    <td>Hiro</td>
+  </tr>
+  <tr>
+    <td>日本</td>
+    <td>男</td>
+    <td>Yasu</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Ted</td>
+  </tr>
+  <tr>
+    <td>イギリス</td>
+    <td>男</td>
+    <td>Bob</td>
+  </tr>
+  <tr>
+    <td>日本</td>
+    <td>女</td>
+    <td>Yui</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Dave</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  </tbody>
+</table>
+<div class="paging"></div>
+ 
+ 
+<script>
+$(document).ready( function () {
+  $('#demo').datatable({
+    pageSize: 5,
+    sort: [true, true, false],
+    filters: ['select', 'select', false]
+  }) ;
+} );
+</script>
+</body>
+</html>
+
