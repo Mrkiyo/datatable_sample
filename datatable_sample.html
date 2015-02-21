@@ -79,23 +79,114 @@
     <td>Dave</td>
   </tr>
   <tr>
+    <td>中国</td>
+    <td>男</td>
+    <td>李</td>
+  </tr>
+  <tr>
+    <td>日本</td>
+    <td>女</td>
+    <td>Ume</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
+    <td>アメリカ</td>
+    <td>男</td>
+    <td>Nicol</td>
+  </tr>
+  <tr>
     <td>アメリカ</td>
     <td>男</td>
     <td>Nicol</td>
   </tr>
   </tbody>
 </table>
+<div class="pageSize">
+show  
+  <select name="pageSize">
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="20" selected>20</option>
+    <option value="100">100</option>
+  </select>
+ entries.
 <div class="paging"></div>
- 
  
 <script>
 $(document).ready( function () {
   $('#demo').datatable({
-    pageSize: 5,
+    pageSize: 20,
     sort: [true, true, false],
     filters: ['select', 'select', false]
   }) ;
+
+  $("[name=pageSize]").change(function(){
+      var val = $(this).children(':selected').val();
+      $('#demo').datatable({
+          pageSize: val
+      });
+  });
 } );
+
 </script>
 </body>
 </html>
